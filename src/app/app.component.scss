@@ -1,0 +1,40 @@
+:host {
+
+    display: flex;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    padding: 8px;
+
+    &>table {
+        --cell-size: calc(100vh / 11);
+
+        &>tr>td {
+            box-sizing: border-box;
+            width: var(--cell-size);
+            height: var(--cell-size);
+            text-align: center;
+            font-size: calc(var(--cell-size) / 2);
+
+            &.space {
+                background-color: yellowgreen;
+            }
+
+            &.start {
+                background-color: burlywood;
+                font-size: calc(var(--cell-size) / 5);
+            }
+
+            &.time {
+                background-color: yellow;
+                font-size: 0.5cm;
+                text-align: right;
+                vertical-align: bottom;
+            }
+
+            &.space:hover, &.start:hover, &.time:hover {
+                border: dashed red
+            }
+        }
+    }
+}
